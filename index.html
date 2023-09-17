@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Furpaws</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Street Furpaws</a>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+            <a href="#">Adopt</a>
+            <a href="#">Volunteer</a>
+        </nav>
+    </header>
+
+    <script>
+        document.getElementById("menuToggle").addEventListener("click", function() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle("show");
+        });
+    </script>
+</body>
+</html>

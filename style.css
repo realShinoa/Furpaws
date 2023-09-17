@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: rgb(230, 230, 230);
+    background-size: cover;
+    background-position: center;
+    scroll-behavior: smooth;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 14%;
+    background-color: #ffcd36;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.5s; /* Smooth hover effect for color */
+}
+
+.logo:hover {
+    color: #2a2a2a;
+}
+
+.navbar {
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+/* Remove underline and purple color on hover */
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 40px;
+    position: relative;
+}
+
+.navbar a:hover {
+    color: #2a2a2a;
+    transition: color 0.5s;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: .5s;
+}
+
+.navbar a:hover::before {
+    width: 100%; /* Remove underline on hover */
+}
+
+/* ... (previous CSS rules) */
+
+/* Media query to hide .navbar and show menu toggle on smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #ffcd36;
+        width: auto; /* Change width to auto to fit content */
+        padding: 20px 20px; /* Adjust padding as needed */
+        z-index: 99;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .navbar.show {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: #fff;
+        margin: 5px auto;
+        transition: background-color 0.5s; /* Smooth hover effect for background color */
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .menu-toggle:hover span {
+        background-color: #ededed;
+    }
+
+    .bar {
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        margin: 3px 0;
+        transition: 0.4s;
+    }
+    
+    /* Add smooth dropdown effect to .navbar */
+    .navbar.show {
+        animation: slide-down 0.5s ease-in-out;
+    }
+
+    @keyframes slide-down {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    /* Adjust text alignment for the right side */
+    .navbar.show a {
+        text-align: right;
+    }
+
+    /* Media query to hide .navbar and show menu toggle on smaller screens */
+    @media (max-width: 768px) {
+        /* ... (previous CSS rules) */
+    
+        /* Add hover effect for the hamburger icon */
+        .menu-toggle:hover span {
+            background-color: #ffcb2f; /* Change color on hover */
+        }
+    }
+}
