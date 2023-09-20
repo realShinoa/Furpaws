@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Furpaws</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/img/sflogo.png" type="StreetFurpaws">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="/index.html" class="logo"><i class='bx bxl-baidu' ></i> Street Furpaws</a>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="navbar" id="navbar">
+            <a href="/index.html">Home <i class='bx bxs-home-circle' ></i></b>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="adopt.html">Adopt</a>
+            <a href="#">Log in <i class='bx bx-log-in'></i></a>
+        </nav>
+    </header>
+
+    <script>
+        document.getElementById("menuToggle").addEventListener("click", function() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle("show");
+        });
+    </script>
+</body>
+</html>

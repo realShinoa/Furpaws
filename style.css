@@ -7,13 +7,21 @@
     font-family: "Poppins", sans-serif;
 }
 
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
 body {
     min-height: 100vh;
-    background-color: rgb(230, 230, 230);
+    color: #2a2a2a;
+    background-color: rgb(241, 241, 241);
     background-size: cover;
     background-position: center;
     scroll-behavior: smooth;
 }
+
 
 .header {
     position: fixed;
@@ -33,7 +41,7 @@ body {
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 700;
-    transition: color 0.5s; /* Smooth hover effect for color */
+    transition: color 0.5s;
 }
 
 .logo:hover {
@@ -48,12 +56,18 @@ body {
     text-decoration: none;
     margin-left: 40px;
     display: flex;
-    align-items: center; /* Center vertically */
+    align-items: center; 
 }
 
-/* Remove underline and purple color on hover */
 .navbar a {
     color: #ffffff;
+    text-decoration: none;
+    margin-left: 40px;
+    position: relative;
+}
+.navbar b {
+    color: #333333;
+    font-weight: 600;
     text-decoration: none;
     margin-left: 40px;
     position: relative;
@@ -61,6 +75,11 @@ body {
 
 .navbar a:hover {
     color: #2a2a2a;
+    transition: color 0.5s;
+}
+
+.navbar b:hover {
+    color: #ffffff;
     transition: color 0.5s;
 }
 
@@ -75,11 +94,118 @@ body {
     transition: .5s;
 }
 
-.navbar a:hover::before {
-    width: 100%; /* Remove underline on hover */
+.navbar b:hover::before {
+    width: 100%; 
 }
 
-/* ... (previous CSS rules) */
+.navbar b::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: .5s;
+}
+
+.navbar a:hover::before {
+    width: 100%; 
+}
+
+.home {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.homepage {
+    max-width: 600px;
+}
+
+.homepage h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.homepage p {
+    font-size: 16px;
+    margin: 10px 0 40px;
+    color: #2a2a2a;
+}
+
+.homepage .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 335px;
+    height: 50px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #ffcd36;
+    border: 2px solid #ffc518;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: #393939;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #393939;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #ffffff;
+
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #ffcd36;
+
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(241, 241, 241);
+    z-index: -1;
+    transition: .6s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+
+}
+
+.details a {
+    transition: color 0.5s;
+}
+
+.details a:hover {
+    color: #ffc518;
+}
 
 /* Media query to hide .navbar and show menu toggle on smaller screens */
 @media (max-width: 768px) {
@@ -87,15 +213,22 @@ body {
         display: none;
         flex-direction: column;
         position: absolute;
+        border-radius: 3%;
         top: 70px;
-        left: 0;
+        right: 0;
+        left: 2px;
         background-color: #ffcd36;
         width: auto; /* Change width to auto to fit content */
-        padding: 20px 20px; /* Adjust padding as needed */
+        padding: 5px 5px; /* Adjust padding as needed */
         z-index: 99;
         transform: translateY(-100%);
         opacity: 0;
         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    /* Adjust text alignment for the right side */
+    .navbar.show a {
+        text-align:center;
     }
 
     .navbar.show {
@@ -157,18 +290,52 @@ body {
         }
     }
 
-    /* Adjust text alignment for the right side */
-    .navbar.show a {
-        text-align: right;
-    }
-
     /* Media query to hide .navbar and show menu toggle on smaller screens */
     @media (max-width: 768px) {
-        /* ... (previous CSS rules) */
     
-        /* Add hover effect for the hamburger icon */
         .menu-toggle:hover span {
-            background-color: #ffcb2f; /* Change color on hover */
+            background-color: #2a2a2a; /* Change color on hover */
         }
     }
+}
+
+.mapbox {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto; 
+    width: 80%; 
+    height: 300px; 
+    overflow: hidden;
+}
+
+.mapbox iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
+.details {
+    text-align: center;
+    position: absolute;
+    bottom: 15px; 
+    left: 0;
+    right: 0;
+}
+
+.main-d {
+    margin-bottom: 10px;
+}
+
+.main-d a {
+    text-decoration: none;
+    color: #2a2a2a;
+    display: block;
+}
+
+.main-d a {
+    display: inline-block;
+    margin-right: 20px; 
 }
