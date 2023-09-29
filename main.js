@@ -1,4 +1,5 @@
 sr.reveal ('.mapbox', {delay:300});
+sr.reveal ('.services', {delay:300});
 
 const slider = document.querySelector('.slider');
 const images = document.querySelectorAll('.slider img');
