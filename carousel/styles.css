@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 100px;
+    background-color: #f2f2f2; /* Cor de fundo do corpo da página */
+    color: #333; /* Cor do texto padrão */
+}
+
+.carousel-container {
+    position: relative;
+    width: 1100px; /* Largura de cada painel */
+    margin: 50px auto;
+    overflow: hidden; /* Adicionando overflow: hidden para esconder conteúdo que ultrapassa a largura */
+    background-color: #e0e0e0; /* Cor de fundo do contêiner do carrossel */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 4400px; /* Largura total do carrossel - 4 painéis * 1100px */
+}
+
+.panel {
+    width: 1100px;
+    height: 400px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border: 1px solid #ccc; /* Cor da borda dos painéis */
+    border-radius: 10px; /* Adicionando bordas arredondadas */
+    overflow: hidden; /* Garantindo que a imagem não ultrapasse as bordas arredondadas */
+    background-color: #f8f8f8; /* Cor de fundo dos painéis */
+}
+
+.content {
+    padding: 20px;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background-color: #2C2020; /* Cor de fundo das setas de navegação */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}

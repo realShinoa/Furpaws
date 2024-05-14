@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Street Furpaws</title>
+    <title>Pet Adoption Web System</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carousel/styles.css">
     <link rel="icon" href="img/sflogo.png" type="StreetFurpaws">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header class="header">
-        <a href="/pages/blog.html" class="logo"><i class='bx bxl-baidu' ></i> Street Furpaws</a>
+        <a href="/pages/blog.html" class="logo"><i class='bx bxl-baidu' ></i>BFRAdoption</a>
         <div class="menu-toggle" id="menuToggle">
             <span></span>
             <span></span>
@@ -26,26 +27,98 @@
         </nav>
     </header>
 
+    <div class="carousel-container">
+        <div class="carousel" id="carousel">
+            <div class="panel">
+                <h1>Painel 1</h1>
+                <img src="/img/panel1.jpg" alt="Image 1">
+            </div>
+            <div class="panel">
+                <h1>Painel 2</h1>
+                <img src="/img/panel2.jpg" alt="Image 2">
+            </div>
+            <div class="panel">
+                <h1>Painel 3</h1>
+                <img src="/img/panel3.jpg" alt="Image 3">
+            </div>
+            <div class="panel">
+                <h1>Painel 4</h1>
+                <img src="/img/panel4.jpg" alt="Image 4">
+            </div>
+            
+            <!-- Adicione os outros três painéis semelhantes aqui -->
+        </div>
+        <button class="prev" onclick="changePanel(-1)">&#8249;</button>
+        <button class="next" onclick="changePanel(1)">&#8250;</button>
+    </div>
+
+    <script src="/carousel/script.js"></script>
+
     <section class="home">
         <div class="homepage">
             <h1>Live fur a cause <i class='bx bxl-baidu'></i></h1>
-            <p>Street Furpaws is a non–goverment local organization from City of Sta. Rosa, Laguna, Philippines who occasionally rescue cats or dogs who are in need. Every month, Street Furpaws holds a stray feeding program for the stray animals.</p>
+            <p>Pet Adoption Web System is a non–goverment local organization from City of Sta. Rosa, Laguna, Philippines who occasionally rescue cats or dogs who are in need. Every month, Street Furpaws holds a stray feeding program for the stray animals.</p>
             <div class="btn-box">
                 <a href="/pages/contact.html">Donate  <i class='bx bxs-heart' ></i></a>
                 <a href="/pages/volunteer.html">Volunteer</a>
             </div>
         </div>
-    </section> 
-    <div class="details">
-        <div class="main-d">
-            <a href="https://www.facebook.com/profile.php?id=100093978746634"><i class='bx bxl-facebook-circle' ></i> Street Furpaws</a>
-        </div>
-
-        <div class="main-d">
-            <a href="https://www.tiktok.com/@streetfurpaws"><i class='bx bxl-tiktok' ></i> Street Furpaws</a>
-        </div>
-
+    </section>
     </div>   
+
+    <section class="homebox" data-mapbox>
+        <figure>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.0023943434517!2d121.10887417592322!3d14.311293584092569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d9b05d6cacc3%3A0x823eb2d097c75ab7!2sLucero%20St%2C%20Santa%20Rosa%2C%20Laguna!5e0!3m2!1sen!2sph!4v1695193235026!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="wrap">
+            <div class="footer-container">
+                <a href="#" class="logo">BFRAdoption</a>
+            </div>
+            <div class="footer-container">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Our Contact</a></li>
+                    <li><a href="#">0969120634</a></li>
+                    <li><a href="#">bfradoption@gmail.com</a></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <h3>Get in touch</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">TikTok</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Youtube</a></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#">Adopt</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <h3>Account</h3>
+                <ul>
+                    <li><a href="/application form/index.html">Application Form</a></li>
+                    <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
 
     <script>
         document.getElementById("menuToggle").addEventListener("click", function() {
@@ -54,5 +127,6 @@
         });
     </script>
     <script src="main.js"></script>
+
 </body>
 </html>

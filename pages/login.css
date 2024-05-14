@@ -6,7 +6,7 @@
 }
 
 body {
-	background: #ffcd36;
+	background: #2C2020;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -45,9 +45,9 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #ffcd36;
-	background-color: #ffcd36;
-	color: #474040;
+	border: 1px solid #2C2020;
+	background-color: #2C2020;
+	color: #e7e7e7;
 	font-size: 12px;
 	font-weight: bold;
 	padding: 12px 45px;
